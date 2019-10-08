@@ -25,3 +25,10 @@ Confirm with:
 ```bash
 iwconfig
 ```
+
+Alternatively, you can use `airmon-ng` to switch to `Monitor` mode with:
+```bash
+airmong-ng start $IFACE
+```
+
+Note that the wireless adapter now shows up as `${IFACE}mon`, for example `wlan1mon`.
