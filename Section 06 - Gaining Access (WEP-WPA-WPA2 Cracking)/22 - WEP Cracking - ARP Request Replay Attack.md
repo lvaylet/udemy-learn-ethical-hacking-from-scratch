@@ -17,12 +17,12 @@ Then run `aireplay-ng` again in a separate terminal. The command is nearly the s
 - Replace the `-a` option with a `-b` option
 
 ```bash
-aireplay-ng --arpreplay -b=<MAC_ADDRESS_OF_TARGET_NETWORK> -h=<MAC_ADDRESS_OF_ADAPTER> $IFACE
+aireplay-ng --arpreplay -b <MAC_ADDRESS_OF_TARGET_NETWORK> -h <MAC_ADDRESS_OF_ADAPTER> $IFACE
 ```
 
 For example:
 ```bash
-aireplay-ng --arpreplay -b=64:16:F0:EC:7B:F3 -h=48:5D:60:2A:45:25 $IFACE
+aireplay-ng --arpreplay -b 64:16:F0:EC:7B:F3 -h 48:5D:60:2A:45:25 $IFACE
 ```
 
 As a result:

